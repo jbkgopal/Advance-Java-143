@@ -1,0 +1,121 @@
+package com.TKAGopal.Project.Session.Controller;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.TKAGopal.Project.Session.Model.Contact;
+import com.TKAGopal.Project.Session.Model.Login;
+
+@Controller
+public class LoginController {
+
+	@Autowired
+	SessionFactory sf;
+
+	@RequestMapping("/") // localhost:8080
+	public String login() {
+		return "gopal"; // login
+	}
+
+	@RequestMapping("/gopal")
+	public String lLogin(Login login, Model model) {
+		Session session = sf.openSession();
+		Login dbLogin = session.get(Login.class, login.getPassword());
+		if (login.getUsername().equals(dbLogin.getUsername())) {
+			return "home";
+		} else {
+			return "gopal";
+		}
+	}
+
+
+	@RequestMapping("/gopal")
+	public String loginDB(Login login,Model model) {
+		Session ss = sf.openSession();
+		Login dblogin = ss.get(Login.class, login.getPassword());// pk
+		
+		String page = "gopal";
+		String msg = null;
+		if (dblogin != null) { 
+			if (login.getUsername().equals(dblogin.getUsername())) {
+				page = "home";
+			} else {
+				msg = "invalid Username";
+			}
+		} else {
+			msg = "invalid Password";
+		}
+		model.addAttribute("msg",msg);
+		return page;
+	}
+
+	@RequestMapping("createaccountpage")
+	public String createaccountpage() {
+		return "gopalgirase"; // createaccount
+	}
+
+	@RequestMapping("/gopalgirase")
+	public Login createaccountpageSave(Login login) {
+		Session s = sf.openSession();
+		Transaction t = s.beginTransaction();
+		s.save(login);
+		t.commit();
+		return login;
+	}
+
+	@RequestMapping("homePage")
+	public String homepage() {
+		return "home";
+	}
+
+	@RequestMapping("aboutpage")
+	public String aboutpage() {
+		return "about";
+	}
+
+	@RequestMapping("coursepage")
+	public String coursepage() {
+		return "course";
+	}
+
+	@RequestMapping("contactpage")
+	public String contactpage() {
+		return "contact";
+	}
+	
+	
+	@RequestMapping("/contact")
+	public Contact createaccountpageSave(Contact contact) {
+		Session s = sf.openSession();
+		Transaction t = s.beginTransaction();
+		s.save(contact);
+		t.commit();
+		return contact;
+	}
+	
+
+	@RequestMapping("/gopalpage") // localhost:8080
+	public String loginpage() {
+		return "gopal"; // login
+	}
+	
+	
+//	@RequestMapping("/gopal")
+//	public String logind(Login login) {
+//		Session s = sf.openSession();
+//		Login dblogin = s.get(Login.class, login.getPassword());
+//		String page = "gopal";
+//
+//		if (login.getUsername().equals(dblogin.getUsername())) {
+//			page = "home";
+//		} else {
+//			page = "gopal";
+//		}
+//		return page;
+//	}
+}

@@ -1,0 +1,57 @@
+
+*** Interview Question's in DataBase/Schema/WorkBeanch ***
+
+MySQL Manualy Work
+
+DataBase Task Today
+
+// Single Or Multiple //
+1) Manual Create DataBase's Single Or Multiple
+2) Manual Create Table's Single Or Multiple
+3) Manual Insert Data in a DataBase's Table Single Or Multiple
+4) Manual Update Data in a DataBase's Table Single Or Multiple
+5) Manual Delete Data in a DataBase's Table Single Or Multiple
+6) Manual Select Data in a DataBase's Table Single Or Multiple
+7) Manual Drop/Delete Table's Single Or Multiple
+8) Manual Drop/Delete DataBase's Single Or Multiple
+
+*** Interview Question's in DataBase/Schema ***
+1) What is DataBase?
+2) Why we use DataBase?
+3) How to use DataBase?
+4) How many time's you create a DataBase/Schema in Your MySQL Software?
+5) How many time's you create a Table in Your MySQL Software?
+6) How many time's you Insert a Record in DataBase Table?
+7) How many time's you Update a Record in DataBase Table?
+8) How many time's you Delete/Drop a Table in DataBase?
+9) How many time's you Delete/Drop a DataBase in DataBase?
+
+
+
+
+*** Interview Question's in DataBase/Schema ***
+
+MySQL Manualy Work
+
+DataBase Task Today
+
+// Single Or Multiple //
+1) Query Create DataBase's Single Or Multiple
+2) Query Create Table's Single Or Multiple
+3) Query Insert Data in a DataBase's Table Single Or Multiple
+4) Query Update Data in a DataBase's Table Single Or Multiple
+5) Query Delete Data in a DataBase's Table Single Or Multiple
+6) Query Select Data in a DataBase's Table Single Or Multiple
+7) Query Drop/Delete Table's Single Or Multiple
+8) Query Drop/Delete DataBase's Single Or Multiple
+
+*** Interview Question's in DataBase/Schema/WorkBeanch ***
+1) What is DataBase?
+2) Why we use DataBase?
+3) How to use DataBase?
+4) How many time's you create a DataBase/Schema in Your MySQL Software?
+5) How many time's you create a Table in Your MySQL Software?
+6) How many time's you Insert a Record in DataBase Table?
+7) How many time's you Update a Record in DataBase Table?
+8) How many time's you Delete/Drop a Table in DataBase?
+9) How many time's you Delete/Drop a DataBase in DataBase?
